@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
-
 *
 {
 	margin: 0;
@@ -9,19 +8,32 @@
 
 }
 
-body
-{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	min-height: 100vh;
-	background: #091921;
-
+body{
+	font-family: 'Open Sans',sans-serif;
+	background-color: #091921;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
-.calculator
-{
-	position: relative;
+
+
+#container{
+	width: 1000px;
+	height: 550px;
+	margin: 20px auto;	
+}
+
+#calculator{
+	width: 320px;
+	height: 520px;
+	background-color: #091921;
+	margin: 0 auto;
+	top: 20px;
 	display: grid;
+	position: relative;
+	border-radius: 2px solid  white;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .calculator .value
 {
@@ -34,36 +46,177 @@ body
 	font-size: 18px;
 
 }
-.calculator span
+
+/*.calculator button
 {
 	display: grid;
 	width: 60px;
 	height: 60px;
 	color: #fff;
+	border-radius: 5px solid black;
 	background: #0c2835;
 	place-items:center;
-	border: 1px solid rgba(0,0,0,.1);
+	
 }
-.calculator span:active
-{
-	background: #cc4c00;
-	color: #111;
+*/
+#result{
+	height: 80px;
+	background-color: white;
+	align-items: center;
 }
-.calculator span.clear
-{
-	grid-column: span 2;
-	width: 120px;
-	background: #cc4c00;
+#history{
+	text-align: right;
+	height: 20px;
+	margin: 0 20px;
+	padding-top: 20px;
+	font-size: 15px;
+	color: #919191;
+}
+#output{
+	text-align: right;
+	height: 60px;
+	margin: 10px 20px;
+	font-size: 30px;
+}
+#keyboard{
+	height: 400px;
+	display: block;
+}
+.operator, .number, .empty{
+	width: 50px;
+	height: 50px;
+	margin: 15px;
+	float: left;
+	border-width: 0;
+	font-weight: bold;
+	font-size: 15px;
+	border-width: 4px;
+    border-style: outset;
+	font: 400 13.3333px Arial;
 
 }
-.calculator span.plus
-{
-	grid-row: span 2;
-	height: 120px;
+.number, .empty{
+	background-color: #03111a;
+	text-indent: 0px;
+	border-width: 4px;
+    border-style: outset;
+	appearance: auto;
+    text-rendering: auto;
+	color: white;
+
+}
+.number, .operator{
+	cursor: pointer;
+}
+.operator:active, .number:active{
+	font-size: 13px;
+}
+.operator:focus, .number:focus, .empty:focus{
+	outline: 0;
+}
+button:nth-child(2){
+	font-size: 20px;
+	background-color: #cc4c00;
+	text-indent: 0px;
+	border-width: 4px;
+    border-style: outset;
+	appearance: auto;
+    text-rendering: auto;
+	color: white;
+
+}
+button:nth-child(1){
+	font-size: 20px;
+	background-color: #cc4c00;
+	text-indent: 0px;
+	border-width: 4px;
+    border-style: outset;
+	appearance: auto;
+    text-rendering: auto;
+	color: white;
+
+}
+
+button:nth-child(4){
+	font-size: 20px;
+	background-color: #03111a;
+	text-indent: 0px;
+	border-width: 4px;
+    border-style: outset;
+	appearance: auto;
+    text-rendering: auto;
+	color: white;
+
+}
+button:nth-child(8){
+	font-size: 20px;
+	background-color: #03111a;
+	text-indent: 0px;
+	border-width: 4px;
+    border-style: outset;
+	appearance: auto;
+    text-rendering: auto;
+	color: white;
+
 	
 }
-.calculator span.equal
-{
-	background: #01a900;
+button:nth-child(12){
+	font-size: 20px;
+	background-color: #03111a;
+	text-indent: 0px;
+	border-width: 4px;
+    border-style: outset;
+	appearance: auto;
+    text-rendering: auto;
+	color: white;
+
 	
+}
+button:nth-child(16){
+	font-size: 20px;
+	background-color: #03111a;
+	text-indent: 0px;
+	border-width: 4px;
+    border-style: outset;
+	appearance: auto;
+    text-rendering: auto;
+	color: white;
+
+	
+}
+button:nth-child(3){
+	font-size: 20px;
+	background-color: #03111a;
+	text-indent: 0px;
+	border-width: 4px;
+    border-style: outset;
+	appearance: auto;
+    text-rendering: auto;
+	color: white;
+
+	
+}
+button:nth-child(19){
+	font-size: 20px;
+	background-color: #03111a;
+	text-indent: 0px;
+	border-width: 4px;
+    border-style: outset;
+	appearance: auto;
+    text-rendering: auto;
+	color: white;
+
+	
+}
+
+button:nth-child(20){
+	font-size: 20px;
+	background-color: forestgreen;
+	text-indent: 0px;
+	border-width: 4px;
+    border-style: outset;
+	appearance: auto;
+    text-rendering: auto;
+	color: white;
+
 }
